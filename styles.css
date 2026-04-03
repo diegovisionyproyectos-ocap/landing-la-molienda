@@ -1129,3 +1129,193 @@ ul { list-style: none; }
   .form-guarantees { flex-direction: column; align-items: center; gap: 6px; }
   .package-cta { padding: 24px 20px; }
 }
+
+/* ============================================================
+   TOUR-FOCUSED COMPONENTS — v3
+   ============================================================ */
+
+/* ---- Hero price box ---- */
+.hero-price-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--radius-lg);
+  padding: 24px 36px;
+  margin: 28px auto;
+  max-width: 600px;
+}
+.price-main { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.price-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.7); }
+.price-amount { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--color-white); line-height: 1; }
+.price-note { font-size: .78rem; color: var(--color-accent-lt); font-weight: 600; letter-spacing: .05em; }
+
+/* ---- Incluye section ---- */
+.incluye { background: var(--color-cream); }
+.incluye-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.incluye-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.incluye-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.incluye-card.incluye-precio {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  text-align: center;
+  align-items: center;
+}
+.incluye-card.incluye-precio h3 { color: rgba(255,255,255,.8); font-size: 1rem; }
+.incluye-card.incluye-precio p  { color: rgba(255,255,255,.65); font-size: .9rem; }
+.incluye-icon { font-size: 2.5rem; line-height: 1; }
+.incluye-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-secondary);
+}
+.incluye-card p { font-size: .92rem; line-height: 1.65; color: var(--color-text-muted); }
+.incluye-img {
+  aspect-ratio: 16/9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: -32px -28px 0;
+}
+.incluye-img img { width: 100%; height: 100%; object-fit: cover; }
+.precio-grande {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-accent-lt);
+  line-height: 1;
+}
+
+/* ---- Fechas section ---- */
+.fechas { background: var(--color-light); }
+.fechas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.fecha-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 36px 24px 28px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: var(--transition);
+}
+.fecha-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.fecha-card.featured { border: 2px solid var(--color-accent); }
+.fecha-popular {
+  position: absolute;
+  top: -14px;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 50px;
+  letter-spacing: .04em;
+}
+.fecha-mes { font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; color: var(--color-text-muted); }
+.fecha-dia { font-family: var(--font-display); font-size: 4rem; font-weight: 700; color: var(--color-secondary); line-height: 1; }
+.fecha-dia-nombre { font-size: .85rem; color: var(--color-text-muted); }
+.fecha-status { font-size: .78rem; font-weight: 700; padding: 4px 12px; border-radius: 50px; }
+.fecha-status.disponible { background: #d1fae5; color: #065f46; }
+.fecha-status.lleno { background: #fee2e2; color: #991b1b; }
+.ciudades-bar {
+  background: var(--color-secondary);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.ciudades-bar p { color: rgba(255,255,255,.8); font-size: .9rem; white-space: nowrap; }
+.ciudades { display: flex; gap: 12px; flex-wrap: wrap; }
+.ciudades span {
+  background: rgba(255,255,255,.12);
+  color: var(--color-white);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+/* ---- Tour resumen (reservar sidebar) ---- */
+.tour-resumen {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+.tour-resumen h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+.tour-precio-display {
+  background: var(--color-secondary);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.tour-precio-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--color-accent-lt); }
+.tour-precio-label { font-size: .82rem; color: rgba(255,255,255,.7); line-height: 1.4; }
+.tour-incluye-lista { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.tour-incluye-lista li { font-size: .92rem; color: var(--color-text-muted); padding: 8px 0; border-bottom: 1px solid rgba(139,58,15,.08); }
+.tour-incluye-lista li:last-child { border-bottom: none; }
+.tour-fechas-lista, .tour-ciudades-lista { margin-bottom: 16px; }
+.tour-fechas-lista p, .tour-ciudades-lista p { font-size: .88rem; color: var(--color-secondary); margin-bottom: 8px; }
+.fechas-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.fechas-pills span {
+  background: var(--color-light);
+  color: var(--color-primary);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: .8rem;
+  font-weight: 600;
+  border: 1px solid rgba(139,58,15,.15);
+}
+
+/* ---- Responsive additions v3 ---- */
+@media (max-width: 900px) {
+  .incluye-grid { grid-template-columns: 1fr 1fr; }
+  .incluye-card.incluye-precio { grid-column: span 2; }
+  .fechas-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .hero-price-box { flex-direction: column; gap: 16px; padding: 20px 24px; }
+  .ciudades-bar { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+@media (max-width: 560px) {
+  .incluye-grid { grid-template-columns: 1fr; }
+  .incluye-card.incluye-precio { grid-column: span 1; }
+  .price-amount { font-size: 2.4rem; }
+  .precio-grande { font-size: 2.8rem; }
+}

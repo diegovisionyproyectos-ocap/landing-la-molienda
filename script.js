@@ -77,15 +77,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
-/* ---- Smooth set minimum date on date input ---- */
-const fechaInput = document.getElementById('fecha');
-if (fechaInput) {
-  const today = new Date();
-  const yyyy  = today.getFullYear();
-  const mm    = String(today.getMonth() + 1).padStart(2, '0');
-  const dd    = String(today.getDate()).padStart(2, '0');
-  fechaInput.min = `${yyyy}-${mm}-${dd}`;
-}
+/* ---- No date min needed — using select for tour dates ---- */
 
 /* ---- Form submission → WhatsApp + Meta Pixel Lead ---- */
 const form       = document.getElementById('reservarForm');
@@ -117,24 +109,27 @@ if (form) {
     }
 
     // Gather form data
-    const nombre      = document.getElementById('nombre').value.trim();
-    const telefono    = document.getElementById('telefono').value.trim();
-    const fecha       = document.getElementById('fecha').value;
-    const personas    = document.getElementById('personas').value;
-    const experiencia = document.getElementById('experiencia').value;
-    const mensaje     = document.getElementById('mensaje').value.trim();
+    const nombre   = document.getElementById('nombre').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const fecha    = document.getElementById('fecha').value;
+    const personas = document.getElementById('personas').value;
+    const ciudad   = document.getElementById('ciudad').value;
+    const mensaje  = document.getElementById('mensaje') ? document.getElementById('mensaje').value.trim() : '';
 
-    const expLabel = experiencia || 'Todas las experiencias';
+    const fechaLabels = { '11-abril': '11 de Abril', '18-abril': '18 de Abril', '25-abril': '25 de Abril' };
+    const ciudadLabels = { 'la-libertad': 'La Libertad', 'san-salvador': 'San Salvador', 'santa-ana': 'Santa Ana', 'san-miguel': 'San Miguel' };
+
     const msgParts = [
-      `🌿 *Solicitud de Reserva - La Molienda*`,
+      `🌿 *Reserva Tour La Molienda — Abril 2026*`,
       ``,
       `👤 *Nombre:* ${nombre}`,
-      `📱 *Teléfono:* ${telefono}`,
-      `📅 *Fecha:* ${fecha}`,
+      `📱 *WhatsApp:* ${telefono}`,
+      `📅 *Fecha elegida:* ${fechaLabels[fecha] || fecha}`,
       `👥 *Personas:* ${personas}`,
-      `🎯 *Experiencia:* ${expLabel}`,
+      `🚌 *Ciudad de salida:* ${ciudadLabels[ciudad] || ciudad}`,
+      `💰 *Total:* $24.99 por persona`,
     ];
-    if (mensaje) msgParts.push(`💬 *Mensaje:* ${mensaje}`);
+    if (mensaje) msgParts.push(`💬 *Nota:* ${mensaje}`);
 
     const waText = encodeURIComponent(msgParts.join('\n'));
     const waUrl  = `https://wa.me/${WA_NUMBER}?text=${waText}`;
@@ -142,9 +137,9 @@ if (form) {
     // Fire Meta Pixel Lead event
     if (typeof fbq === 'function') {
       fbq('track', 'Lead', {
-        content_name: expLabel,
-        content_category: 'Reservacion',
-        value: 0,
+        content_name: `Tour La Molienda — ${fechaLabels[fecha] || fecha}`,
+        content_category: 'Tour',
+        value: 24.99,
         currency: 'USD',
       });
     }
@@ -156,7 +151,7 @@ if (form) {
     submitBtn.textContent = '✓ Redirigiendo a WhatsApp…';
     submitBtn.style.background = '#25D366';
     setTimeout(() => {
-      submitBtn.textContent = 'Enviar mi solicitud de reserva →';
+      submitBtn.textContent = 'Reservar mi lugar — $24.99 →';
       submitBtn.style.background = '';
       form.reset();
     }, 3500);
@@ -165,8 +160,8 @@ if (form) {
 
 /* ---- Meta Pixel: ViewContent on section visibility ---- */
 const pixelSectionMap = {
-  'experiencias': 'Experiencias',
-  'nosotros':     'Nosotros',
+  'incluye':      'Que Incluye',
+  'fechas':       'Fechas',
   'galeria':      'Galeria',
   'testimonios':  'Testimonios',
   'reservar':     'Reservar',
