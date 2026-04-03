@@ -182,12 +182,12 @@ ul { list-style: none; }
   gap: 24px;
 }
 .nav-logo img {
-  height: 48px;
+  height: 52px;
   width: auto;
-  filter: brightness(0) invert(1) drop-shadow(0 1px 4px rgba(0,0,0,.3));
+  mix-blend-mode: lighten;
   transition: var(--transition);
 }
-.navbar.scrolled .nav-logo img { filter: none; }
+.navbar.scrolled .nav-logo img { mix-blend-mode: lighten; }
 .nav-menu {
   display: flex;
   align-items: center;
@@ -680,10 +680,10 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 .footer-logo {
-  height: 56px;
+  height: 64px;
   width: auto;
   margin-bottom: 16px;
-  filter: brightness(0) invert(1) opacity(.9);
+  mix-blend-mode: lighten;
 }
 .footer-brand p {
   font-size: .9rem;
