@@ -90,7 +90,7 @@ if (fechaInput) {
 /* ---- Form submission → WhatsApp + Meta Pixel Lead ---- */
 const form       = document.getElementById('reservarForm');
 const submitBtn  = document.getElementById('submitBtn');
-const WA_NUMBER  = '50300000000'; // ← Reemplaza con el número real (sin + ni espacios)
+const WA_NUMBER  = '50378865638'; // ← Reemplaza con el número real (sin + ni espacios)
 
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -156,7 +156,7 @@ if (form) {
     submitBtn.textContent = '✓ Redirigiendo a WhatsApp…';
     submitBtn.style.background = '#25D366';
     setTimeout(() => {
-      submitBtn.textContent = 'Enviar solicitud de reserva';
+      submitBtn.textContent = 'Enviar mi solicitud de reserva →';
       submitBtn.style.background = '';
       form.reset();
     }, 3500);
@@ -168,6 +168,7 @@ const pixelSectionMap = {
   'experiencias': 'Experiencias',
   'nosotros':     'Nosotros',
   'galeria':      'Galeria',
+  'testimonios':  'Testimonios',
   'reservar':     'Reservar',
 };
 
