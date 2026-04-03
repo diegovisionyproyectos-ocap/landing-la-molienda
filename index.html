@@ -62,6 +62,7 @@
     <div class="hero-bg" style="background-image: url('images/hero-lancha.jpg');"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
+      <img src="images/logo.png" alt="La Molienda" class="hero-logo" />
       <div class="hero-badge">🔥 Quedan pocas plazas — Abril 2026</div>
       <h1 class="hero-title">
         La salida perfecta<br />
@@ -82,7 +83,7 @@
         </a>
       </div>
       <div class="hero-trust">
-        <span>✅ Sin pago adelantado</span>
+        
         <span>✅ Transporte incluido</span>
         <span>✅ Para toda la familia</span>
       </div>
@@ -146,7 +147,7 @@
 
         <div class="incluye-card reveal" data-delay="200">
           <div class="incluye-img">
-            <img src="images/production.jpg" alt="Tour del ingenio" loading="lazy" />
+            <img src="images/production.jpg" alt="Tour La Molienda" loading="lazy" />
           </div>
           <h3>🏭 Tour del dulce de atado</h3>
           <p>Recorrés el ingenio artesanal, ves el proceso completo y te llevás tu propio dulce de atado de recuerdo.</p>
@@ -172,7 +173,7 @@
           <div class="incluye-icon">💰</div>
           <h3>Todo eso por solo</h3>
           <div class="precio-grande">$24.99</div>
-          <p>Por persona. Sin costos ocultos. Sin pagos adicionales en el lugar.</p>
+          <p>Por persona. Sin costos ocultos ni cobros extras en el lugar.</p>
           <a href="#reservar" class="btn btn-primary" style="margin-top: 16px;" id="ctaIncluye">
             Reservar mi lugar →
           </a>
@@ -250,8 +251,8 @@
           <div class="gallery-overlay"><span>Cañaverales</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/production.jpg" alt="Tour del ingenio" loading="lazy" />
-          <div class="gallery-overlay"><span>Tour del ingenio</span></div>
+          <img src="images/production.jpg" alt="Tour La Molienda" loading="lazy" />
+          <div class="gallery-overlay"><span>Tour La Molienda</span></div>
         </div>
         <div class="gallery-item wide">
           <img src="images/pool-fun.jpg" alt="Piscina La Molienda" loading="lazy" />
@@ -290,7 +291,7 @@
       <div class="testimonios-grid">
         <div class="testimonio-card reveal" data-delay="0">
           <div class="testimonio-stars">⭐⭐⭐⭐⭐</div>
-          <p>Los niños quedaron encantados con el tour del ingenio. Ver cómo se hace el dulce de atado es algo que no esperábamos y fue lo mejor del día. El transporte puntual y todo muy organizado.</p>
+          <p>Los niños quedaron encantados con el Tour La Molienda. Ver cómo se hace el dulce de atado es algo que no esperábamos y fue lo mejor del día. El transporte puntual y todo muy organizado.</p>
           <div class="testimonio-autor">
             <div class="testimonio-avatar">MR</div>
             <div>
@@ -330,7 +331,7 @@
     <div class="container">
       <p>
         🔥 <strong>Los cupos de Abril se están llenando.</strong>
-        <a href="#reservar" id="ctaUrgencia">Asegurá tu lugar ahora — es gratis reservar.</a>
+        <a href="#reservar" id="ctaUrgencia">Asegurá tu lugar ahora — reservar tu lugar es rápido y sencillo.</a>
       </p>
     </div>
   </div>
@@ -338,126 +339,82 @@
   <!-- ===== RESERVAR ===== -->
   <section class="section reservar" id="reservar">
     <div class="container">
-      <div class="reservar-grid">
 
-        <div class="reservar-form-wrap reveal">
-          <span class="section-eyebrow">Reservá tu lugar</span>
-          <h2 class="section-title">Un paso y listo.<br /><em>Te confirmamos hoy.</em></h2>
-          <p class="reservar-intro">Llenás el formulario, te escribimos por WhatsApp para confirmar los detalles. <strong>Sin pago adelantado.</strong></p>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Reservá tu lugar</span>
+        <h2 class="section-title">Elegí tu fecha y<br /><em>escribinos directo.</em></h2>
+        <p class="section-subtitle">Escribinos por WhatsApp, elegís tu fecha y te pedimos un pequeño adelanto para confirmar tu lugar.</p>
+      </div>
 
-          <form class="reservar-form" id="reservarForm" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nombre">Tu nombre *</label>
-                <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamás?" required />
-              </div>
-              <div class="form-group">
-                <label for="telefono">Tu WhatsApp *</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+503 0000-0000" required />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fecha">¿Qué fecha elegís? *</label>
-                <select id="fecha" name="fecha" required>
-                  <option value="">Seleccioná</option>
-                  <option value="11-abril">11 de Abril</option>
-                  <option value="18-abril">18 de Abril ⭐</option>
-                  <option value="25-abril">25 de Abril</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="personas">¿Cuántos van? *</label>
-                <select id="personas" name="personas" required>
-                  <option value="">Seleccioná</option>
-                  <option value="1">1 persona</option>
-                  <option value="2">2 personas</option>
-                  <option value="3-5">3 - 5 personas</option>
-                  <option value="6-10">6 - 10 personas</option>
-                  <option value="11+">Más de 10</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="ciudad">¿Desde dónde salís? *</label>
-              <select id="ciudad" name="ciudad" required>
-                <option value="">Seleccioná tu ciudad</option>
-                <option value="la-libertad">La Libertad</option>
-                <option value="san-salvador">San Salvador</option>
-                <option value="santa-ana">Santa Ana</option>
-                <option value="san-miguel">San Miguel</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="mensaje">¿Algo que debamos saber? (opcional)</label>
-              <textarea id="mensaje" name="mensaje" rows="2" placeholder="¿Niños pequeños, cumpleaños, alguna restricción alimentaria?"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
-              Reservar mi lugar — $24.99 →
-            </button>
-            <div class="form-guarantees">
-              <span>✅ Sin pago adelantado</span>
-              <span>✅ Respondemos en menos de 2h</span>
-              <span>✅ Podés cancelar gratis</span>
-            </div>
-          </form>
+      <!-- Resumen precio -->
+      <div class="reservar-resumen reveal">
+        <div class="tour-precio-display">
+          <span class="tour-precio-num">$24.99</span>
+          <span class="tour-precio-label">por persona · todo incluido</span>
+        </div>
+        <ul class="reservar-incluye-inline">
+          <li>🚌 Transporte</li>
+          <li>🍽️ Almuerzo + bebida</li>
+          <li>🏭 Tour dulce de atado</li>
+          <li>⛵ Lancha en la laguna</li>
+          <li>🏊 Piscina</li>
+        </ul>
+      </div>
+
+      <!-- Botones WhatsApp por fecha -->
+      <div class="wa-fechas-grid reveal">
+
+        <div class="wa-fecha-card" data-delay="0">
+          <div class="wa-fecha-header">
+            <span class="wa-fecha-mes">ABRIL</span>
+            <span class="wa-fecha-dia">11</span>
+            <span class="wa-fecha-dia-nombre">Viernes</span>
+          </div>
+          <a href="https://wa.me/50378865638?text=Hola%21%20Quiero%20reservar%20el%20Tour%20La%20Molienda%20del%2011%20de%20Abril%20%F0%9F%8C%BF%20%24%2024.99%20por%20persona"
+             class="btn btn-whatsapp btn-full"
+             target="_blank" rel="noopener" id="waFecha1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Reservar 11 de Abril
+          </a>
         </div>
 
-        <!-- Resumen del tour -->
-        <div class="reservar-info reveal" data-delay="150">
-          <div class="tour-resumen">
-            <h3>Resumen del Tour</h3>
-            <div class="tour-precio-display">
-              <span class="tour-precio-num">$24.99</span>
-              <span class="tour-precio-label">por persona · todo incluido</span>
-            </div>
-            <ul class="tour-incluye-lista">
-              <li>🚌 Transporte ida y vuelta</li>
-              <li>🍽️ Almuerzo + bebida incluidos</li>
-              <li>🏭 Tour del dulce de atado artesanal</li>
-              <li>⛵ Paseo en lancha — Laguna de Apastepeque</li>
-              <li>🏊 Piscina</li>
-            </ul>
-            <div class="tour-fechas-lista">
-              <p><strong>📅 Fechas Abril 2026</strong></p>
-              <div class="fechas-pills">
-                <span>11 Abril</span>
-                <span>18 Abril</span>
-                <span>25 Abril</span>
-              </div>
-            </div>
-            <div class="tour-ciudades-lista">
-              <p><strong>🚌 Puntos de salida</strong></p>
-              <div class="fechas-pills">
-                <span>La Libertad</span>
-                <span>San Salvador</span>
-                <span>Santa Ana</span>
-                <span>San Miguel</span>
-              </div>
-            </div>
+        <div class="wa-fecha-card featured" data-delay="150">
+          <div class="wa-fecha-popular">⭐ Más pedida</div>
+          <div class="wa-fecha-header">
+            <span class="wa-fecha-mes">ABRIL</span>
+            <span class="wa-fecha-dia">18</span>
+            <span class="wa-fecha-dia-nombre">Viernes</span>
           </div>
-
-          <a href="https://wa.me/50378865638?text=Hola%2C%20quiero%20reservar%20el%20Tour%20La%20Molienda%20de%20Abril%20%F0%9F%8C%BF"
-             class="btn btn-whatsapp"
-             target="_blank"
-             rel="noopener"
-             id="whatsappBtn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Reservar directo por WhatsApp
+          <a href="https://wa.me/50378865638?text=Hola%21%20Quiero%20reservar%20el%20Tour%20La%20Molienda%20del%2018%20de%20Abril%20%F0%9F%8C%BF%20%24%2024.99%20por%20persona"
+             class="btn btn-whatsapp btn-full"
+             target="_blank" rel="noopener" id="waFecha2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Reservar 18 de Abril
           </a>
+        </div>
 
-          <div class="info-item" style="margin-top:16px;">
-            <div class="info-icon">📞</div>
-            <div>
-              <strong>+503 7886-5638</strong>
-              <span>WhatsApp disponible</span>
-            </div>
+        <div class="wa-fecha-card" data-delay="300">
+          <div class="wa-fecha-header">
+            <span class="wa-fecha-mes">ABRIL</span>
+            <span class="wa-fecha-dia">25</span>
+            <span class="wa-fecha-dia-nombre">Viernes</span>
           </div>
+          <a href="https://wa.me/50378865638?text=Hola%21%20Quiero%20reservar%20el%20Tour%20La%20Molienda%20del%2025%20de%20Abril%20%F0%9F%8C%BF%20%24%2024.99%20por%20persona"
+             class="btn btn-whatsapp btn-full"
+             target="_blank" rel="noopener" id="waFecha3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Reservar 25 de Abril
+          </a>
         </div>
 
       </div>
+
+      <div class="reservar-garantias reveal">
+        
+        <span>💳 Adelanto para confirmar tu lugar</span>
+        <span>✅ Cupo asegurado al reservar</span>
+      </div>
+
     </div>
   </section>
 
